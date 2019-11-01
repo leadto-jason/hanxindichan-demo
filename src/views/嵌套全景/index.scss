@@ -1,0 +1,111 @@
+@import "../../assets/styles/utils";
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: vw(792px);
+  width: 100%;
+  padding-left: vw(50px);
+  padding-right: vw(50px);
+  background-color: #fff;
+  border: none;
+}
+
+.header {
+  position: absolute;
+  top: vw(38px);
+  right: vw(80px);
+  max-width: vw(194px);
+}
+
+.logo {
+  position: absolute;
+  top: vw(47px);
+  left: vw(93px);
+}
+
+.search {
+  position: absolute;
+  right: vw(50px);
+  background-color: #F2F6F7;
+  width: 75vw;
+  display: flex;
+  @include res(height, 200px, (
+    lg: 150px
+  ));
+  @include res(top, vw(744px), (
+    lg: vw(694px)
+  ));
+  &-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    @include res(padding-left, 150px, 15 / 150);
+    @include res(padding-right, 150px, 15 / 150);
+    &-group {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-link {
+    flex-grow: 1;
+  }
+  &-btn, &-input {
+    height: 50px;
+    border-bottom: 2px solid #CAD7DA !important;
+  }
+  &-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff;
+    background-color: #009DA0;
+    border: none;
+  }
+  &-input {
+    width: 30vw;
+    border: none;
+    padding: 10px;
+    outline: none;
+    @include res(margin-right, 28px, 14 / 28);
+  }
+  &-more {
+    color: #009DA0;
+  }
+  &-recommend {
+    color: #b8b8b8;
+    font-size: 14px;
+    margin-top: 14px;
+    padding-left: 60px;
+    transition: all .15s;
+    a:hover {
+      color: #009DA0;
+    }
+    a + a {
+      margin-left: 5px;
+    }
+  }
+  &-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/search-link-bg.jpg);
+    @include bg-cover;
+    &-icon {
+      @include res(margin-bottom, 25px, 12 / 25);
+    }
+    &-text {
+      color: #fff;
+      @include res(font-size, 22px, 16 / 22);
+    }
+  }
+}

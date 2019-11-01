@@ -1,0 +1,47 @@
+.root {
+  display: flex;
+  height: 100vh;
+  &-group {
+    height: 100%;
+    width: 50%;
+    flex-shrink: 0;
+    overflow: scroll;
+    padding: 40px;
+  }
+  &-title {
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+}
+.list {
+  &-item {
+    display: block;
+    padding: 15px;
+    border: 1px solid rgba(#000, 0.1);
+    border-radius: 4px;
+    transition: all .15s;
+    & + & {
+      margin-top: 15px;
+    }
+    &:hover {
+      background-color: rgba(#000, 0.1);
+    }
+  }
+}
+.component {
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &-title {
+      margin-bottom: 15px;
+    }
+    &-body {
+      padding: 15px;
+      border: 1px solid rgba(#000, 0.1);
+      border-radius: 4px;
+      max-width: 100%;
+      overflow: auto;
+    }
+  }
+}

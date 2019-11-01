@@ -1,0 +1,8 @@
+// 响应式断点，需要从小到大写
+$layout-responsive-breakpoint: (
+  xs: (min-width: 0px, container-width: 100%),
+  sm: (min-width: 768px, container-width: 720px),
+  md: (min-width: 992px, container-width: 960px),
+  lg: (min-width: 1280px, container-width: 1230px),
+  xl: (min-width: 1367px, container-width: 1280px)
+);

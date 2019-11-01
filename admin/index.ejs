@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>admin</title>
+</head>
+<body class="page-admin">
+<main class="root">
+  <div class="root-group">
+    <h3 class="root-title">
+      页面
+    </h3>
+    <div class="list">
+      <a
+        class="list-item"
+        v-for="htmlName in htmlNameArr"
+        :key="htmlName"
+        :href="'./' + htmlName"
+        v-html="htmlName">
+      </a>
+    </div>
+  </div>
+  <div class="root-group">
+    <h3 class="root-title">
+      组件
+    </h3>
+    <div class="component">
+      <div
+        class="component-item"
+        v-for="comp in compArr"
+        :key="comp.dirname">
+        <h4
+          class="component-item-title"
+          v-html="comp.dirname">
+        </h4>
+        <div
+          class="component-item-body"
+          v-html="comp.render()">
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</body>
+</html>

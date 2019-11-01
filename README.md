@@ -1,1 +1,7 @@
-# hanxindichan-demo
+## bash
+```bash
+npm run dev
+npm run build
+```
+
+
