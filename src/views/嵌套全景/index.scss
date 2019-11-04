@@ -36,10 +36,10 @@ img {
   background-color: #F2F6F7;
   width: 75vw;
   display: flex;
-  @include res(height, 200px, (
+  @include res(height, 180px, (
     lg: 150px
   ));
-  @include res(top, vw(744px), (
+  @include res(top, vw(705px), (
     lg: vw(694px)
   ));
   &-body {
